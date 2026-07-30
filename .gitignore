@@ -1,0 +1,18 @@
+# Angular and Node dependencies
+node_modules/
+
+# Angular build files
+dist/
+.angular/
+
+# Environment and local files
+.env
+*.log
+
+# IDE files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
