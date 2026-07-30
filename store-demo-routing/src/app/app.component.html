@@ -1,0 +1,42 @@
+<header class="site-header">
+  <a
+    class="store-name"
+    routerLink="/products"
+  >
+    Angular Store Demo
+  </a>
+
+  <nav aria-label="Main navigation">
+    <a
+      routerLink="/products"
+      routerLinkActive="active-link"
+    >
+      Products
+    </a>
+
+    <a
+      routerLink="/cart"
+      routerLinkActive="active-link"
+    >
+      Cart
+      <span class="cart-count">
+        ({{ cartService.itemCount() }})
+      </span>
+    </a>
+
+    <a
+      routerLink="/about"
+      routerLinkActive="active-link"
+    >
+      About
+    </a>
+  </nav>
+</header>
+
+<main class="page-content">
+  <router-outlet />
+</main>
+
+<footer class="site-footer">
+  <p>Angular Store Demo</p>
+</footer>

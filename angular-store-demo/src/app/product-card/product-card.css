@@ -1,0 +1,44 @@
+.product-card {
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 1rem;
+  background: white;
+}
+
+.product-card h2 {
+  margin-top: 0;
+}
+
+.description {
+  min-height: 3rem;
+  color: #4b5563;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.stock {
+  font-weight: 600;
+}
+
+.available {
+  color: #15803d;
+}
+
+.unavailable {
+  color: #b91c1c;
+}
+
+button {
+  border: none;
+  border-radius: 6px;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}

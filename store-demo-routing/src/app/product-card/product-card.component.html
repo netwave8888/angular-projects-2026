@@ -1,0 +1,32 @@
+<article class="product-card">
+  <h2>{{ product().name }}</h2>
+
+  <p class="description">
+    {{ product().description }}
+  </p>
+
+  <p class="price">
+    {{ product().price | currency }}
+  </p>
+
+  @if (product().inStock) {
+    <p class="stock available">
+      In stock
+    </p>
+
+    <button
+      type="button"
+      (click)="handleAddToCart()"
+    >
+      Add to cart
+    </button>
+  } @else {
+    <p class="stock unavailable">
+      Out of stock
+    </p>
+
+    <button type="button" disabled>
+      Add to cart
+    </button>
+  }
+</article>

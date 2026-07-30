@@ -1,0 +1,62 @@
+<section class="cart-page">
+  <h1>Shopping Cart</h1>
+
+  @if (cartService.items().length === 0) {
+    <div class="empty-cart">
+      <p>Your cart is empty.</p>
+
+      <a routerLink="/products">
+        Browse products
+      </a>
+    </div>
+  } @else {
+    <ul class="cart-list">
+      @for (
+        item of cartService.items();
+        track $index
+      ) {
+        <li class="cart-item">
+          <div class="item-information">
+            <strong>{{ item.name }}</strong>
+
+            <span>
+              {{ item.price | currency }}
+            </span>
+          </div>
+
+          <button
+            type="button"
+            class="remove-button"
+            (click)="removeProduct($index)"
+          >
+            Remove
+          </button>
+        </li>
+      }
+    </ul>
+
+    <div class="cart-summary">
+      <p>
+        Number of items:
+        <strong>
+          {{ cartService.itemCount() }}
+        </strong>
+      </p>
+
+      <p class="cart-total">
+        Total:
+        <strong>
+          {{ cartService.total() | currency }}
+        </strong>
+      </p>
+
+      <button
+        type="button"
+        class="clear-button"
+        (click)="clearCart()"
+      >
+        Clear cart
+      </button>
+    </div>
+  }
+</section>

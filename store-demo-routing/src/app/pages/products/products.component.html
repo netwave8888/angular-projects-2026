@@ -1,0 +1,19 @@
+<section class="products-page">
+  <div class="page-heading">
+    <h1>Products</h1>
+
+    <p>
+      Browse our office equipment and add items
+      to your shopping cart.
+    </p>
+  </div>
+
+  <div class="product-grid">
+    @for (product of products; track product.id) {
+      <app-product-card
+        [product]="product"
+        (addToCart)="addProductToCart($event)"
+      />
+    }
+  </div>
+</section>
